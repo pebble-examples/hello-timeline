@@ -1,0 +1,22 @@
+{
+  "uuid": "1196edfa-9295-4226-81d1-fec3750e3042",
+  "shortName": "hello-timeline",
+  "longName": "hello-timeline",
+  "companyName": "Pebble Technology",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["basalt"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "ready": 0,
+    "text": 1,
+    "minutes": 2,
+    "quit": 3
+  },
+  "resources": {
+    "media": []
+  }
+}

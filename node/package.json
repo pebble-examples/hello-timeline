@@ -1,0 +1,19 @@
+{
+  "name": "hello-timeline",
+  "version": "0.0.1",
+  "description": "An example server app for Pebble hello-timeline example",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.0.0",
+    "pebble-api": "^0.0.2",
+    "randomstring": "^1.0.0",
+    "request": "^2.53.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "license": "MIT"
+}
