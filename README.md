@@ -11,6 +11,13 @@ Start by cloning this repository to your local machine.
 git clone https://github.com/pebble-examples/hello-timeline.git
 ```
 
+Generate a new UUID for your copy of this project, and copy it into
+`appinfo.json`.
+
+```
+uuidgen
+```
+
 Enable the timeline for the watchapp by uploading it to the 
 [dev-portal](https://dev-portal.getpebble.com/) and clicking 'Enable timeline'. 
 This enables the timeline API to identify the app.
