@@ -3,6 +3,9 @@
 This Hello Timeline example app shows how to use the 
 [Pebble timeline API][timeline-guides] with user tokens.
 
+![](screenshots/screenshot.png)
+
+
 ## Getting Started
 
 Start by cloning this repository to your local machine.
