@@ -1,5 +1,7 @@
 # Hello Timeline Example
 
+[![Build Status](https://travis-ci.org/pebble-examples/hello-timeline.svg)](https://travis-ci.org/pebble-examples/hello-timeline)
+
 This Hello Timeline example app shows how to use the 
 [Pebble timeline API][timeline-guides] with user tokens.
 
