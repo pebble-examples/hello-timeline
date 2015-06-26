@@ -25,7 +25,7 @@ function requestPin(userToken, minutesToAdd) {
 }
 
 // ready event
-Pebble.addEventListener('ready', function(e) {
+Pebble.addEventListener('ready', function() {
 
   // get the timeline token
   Pebble.getTimelineToken(function (token) {
