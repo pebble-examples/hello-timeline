@@ -1,6 +1,9 @@
+'use strict';
+
 var express = require('express');
 var randomstring = require('randomstring');
 var Timeline = require('pebble-api');
+var util = require('util');
 
 var app = express();
 app.set('port', (process.env.PORT || 5000));
@@ -18,7 +21,8 @@ app.get('/senduserpin/:userToken/:minutesToAdd?', function (req, res) {
   var userToken = req.params.userToken;
   var minutesToAdd = req.params.minutesToAdd || 0;
 
-  console.log('Got a request from ' + userToken + ' to send in a pin in ' + minutesToAdd + ' min');
+  console.log(util.format('Got a request from %s to send a pin in %d min',
+    userToken, minutesToAdd));
 
   // generate a random id
   var id = randomstring.generate(8);
@@ -57,6 +61,6 @@ app.get('/senduserpin/:userToken/:minutesToAdd?', function (req, res) {
 });
 
 // start the webserver
-var server = app.listen(app.get('port'), function () {
+app.listen(app.get('port'), function () {
   console.log('timeline-user example app listening on port %s', app.get('port'));
 });
