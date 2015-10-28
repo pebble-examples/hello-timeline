@@ -57,7 +57,8 @@ static void window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
 
-  s_text_layer = text_layer_create(bounds);
+  const int y_offset = 20;
+  s_text_layer = text_layer_create(grect_inset(bounds, GEdgeInsets(y_offset, 0)));
   text_layer_set_text(s_text_layer, "Requesting a pin to be sent to your timeline...");
   text_layer_set_text_alignment(s_text_layer, GTextAlignmentCenter);
   text_layer_set_background_color(s_text_layer, GColorClear);
@@ -66,7 +67,7 @@ static void window_load(Window *window) {
   layer_add_child(window_layer, text_layer_get_layer(s_text_layer));
 
 #if defined(PBL_ROUND)
-  text_layer_enable_screen_text_flow_and_paging(s_text_layer, 3);
+  text_layer_enable_screen_text_flow_and_paging(s_text_layer, 5);
 #endif
 }
 
