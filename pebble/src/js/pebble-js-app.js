@@ -13,11 +13,11 @@ function requestPin(userToken, minutesToAdd) {
     console.log('requestPin server response: ' + xhr.responseText);
 
     // Update text on the watch to say we've sent the pin
-    Pebble.sendAppMessage({text: 'Sent!\nCheck your timeline!'});
+    Pebble.sendAppMessage({'AppKeyText': 'Sent!\nCheck your timeline!'});
 
     // set a timer to quit the app in 2 seconds
     setTimeout(function() {
-      Pebble.sendAppMessage({quit: true});
+      Pebble.sendAppMessage({'AppKeyQuit': true});
     }, 2000);
   };
 
@@ -31,7 +31,7 @@ Pebble.addEventListener('ready', function() {
   Pebble.getTimelineToken(function (token) {
 
     // tell the C side we're ready
-    Pebble.sendAppMessage({ready: true});
+    Pebble.sendAppMessage({'AppKeyReady': true});
 
     // log the timeline token
     console.log('My timeline token is ' + token);
@@ -48,7 +48,7 @@ Pebble.addEventListener('ready', function() {
 Pebble.addEventListener('appmessage', function(e) {
   console.log('Received message: ' + JSON.stringify(e.payload));
 
-  if (e.payload.minutes) {
-    requestPin(myToken, e.payload.minutes);
+  if (e.payload['AppKeyMinutes']) {
+    requestPin(myToken, e.payload['AppKeyMinutes']);
   }
 });
