@@ -6,15 +6,15 @@
   "versionCode": 1,
   "versionLabel": "1.0",
   "sdkVersion": "3",
-  "targetPlatforms": ["basalt"],
+  "targetPlatforms": ["basalt", "chalk"],
   "watchapp": {
     "watchface": false
   },
   "appKeys": {
-    "ready": 0,
-    "text": 1,
-    "minutes": 2,
-    "quit": 3
+    "AppKeyReady": 0,
+    "AppKeyText": 1,
+    "AppKeyMinutes": 2,
+    "AppKeyQuit": 3
   },
   "resources": {
     "media": []
